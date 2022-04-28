@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    tools{
+        jdk 'JDK_17'
+        maven 'apache-maven-3.8.5'
+    }
     stages {
-        stage('Example') {
+        stage('Initialization') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "JAVA_HOME = ${M2_HOME}"
+                echo "M2_HOME = ${M2_HOME}"
             }
         }
         stage('Build') {
