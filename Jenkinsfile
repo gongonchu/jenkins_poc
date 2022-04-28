@@ -4,6 +4,9 @@ pipeline {
         jdk 'JDK_17'
         maven 'apache-maven-3.8.5'
     }
+    options{
+        ansiColor('xterm')
+    }
     stages {
         stage('Initialization') {
             steps {
