@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Initialization') {
             steps {
-                echo "JAVA_HOME = ${M2_HOME}"
+                echo "\033[44mJAVA_HOME = ${M2_HOME}\033[0m"
                 echo "M2_HOME = ${M2_HOME}"
             }
         }
